@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <main>
-        <h1>Let's Play Boggle!</h1>
+    <h1>Let's Play Boggle!</h1>
+    <section id="board">
         <table>
             {% for row in board %}
             <tr>
@@ -21,14 +21,32 @@
             </tr>
             {% endfor %}
         </table>
+    </section>
 
+    <section id="word-form">
         <form action="" id="guess-word-form">
             <input type="text" name="guess" placeholder="Enter a word!" id="guess">
-            <button>Submit</button>
         </form>
-    </main>
+    </section>
+
+    <section id="highscore">
+        High Score: {{session['highscore']}} in {{session['plays']}} play(s)
+    </section>
+
+    <section id="score">
+
+    </section>
+
+    <section id="timer">
+
+    </section>
+
+    <section id="msg">
+
+    </section>
+
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
-    <script src="/static/boggle.js"></script>
+    <script src="/static/home.js"></script>
 </body>
 
 </html>
